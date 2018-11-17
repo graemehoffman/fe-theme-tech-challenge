@@ -1,4 +1,4 @@
-// import 'jquery';
+import 'jquery';
 import GeneralScripts from './_generalScripts';
 
 const App = {

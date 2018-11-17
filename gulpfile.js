@@ -63,7 +63,7 @@ gulp.task('images:watch', gulp.parallel('images:dev', lazyQuire(require, './gulp
 gulp.task('scripts:clean', lazyQuire(require, './gulp/core/recipes/scripts/clean'));
 gulp.task('scripts:dev', gulp.series('scripts:clean', lazyQuire(require, './gulp/core/recipes/scripts/dev')));
 gulp.task('scripts:prod', gulp.series('scripts:clean', lazyQuire(require, './gulp/core/recipes/scripts/prod')));
-gulp.task('scripts:watch', gulp.parallel('scripts:dev', lazyQuire(require, './gulp/core/recipes/scripts/watch')));
+gulp.task('scripts:watch', gulp.parallel(lazyQuire(require, './gulp/core/recipes/scripts/watch')));
 
 
 /**
