@@ -1,6 +1,5 @@
 
 html {
-    font-size: 62.5%;
     -ms-text-size-adjust: 100%;
 }
 
@@ -11,8 +10,14 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-    font-size: 1.4rem;
+body,
+form,
+button,
+input,
+select,
+textarea {
+    font: $font-weight-base 100%/$line-height-base $font-family-base;
+    color: $color-body-base;
 }
 
 a,
@@ -27,6 +32,3 @@ a:active {
     outline:0 !important;
 }
 
-.transition, %transition {
-    transition:all 0.3s ease-in-out;
-}

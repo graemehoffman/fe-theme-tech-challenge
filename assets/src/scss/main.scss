@@ -1,31 +1,29 @@
 
 // dependencies
-@import "node_modules/breakpoint-sass/stylesheets/breakpoint",
-		"node_modules/breakpoint-slicer/stylesheets/breakpoint-slicer";
+@import "node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import "node_modules/breakpoint-slicer/stylesheets/breakpoint-slicer";
 
 // abstracts
-@import "abstracts/variables";
-
-// vendors
-@import "node_modules/bootstrap/scss/bootstrap";
+@import "utils/variables";
 
 // vendors overrides
-// @import "vendors/myvendor";
+@import "vendors/normalize";
+@import "vendors/icomoon";
 
 // base
-@import "base/fonts",
-        "base/base";
+@import "base/base";
+
 
 // layout
-@import "layout/header",
-        "layout/footer",
-        "layout/forms",
-        "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/forms";
+@import "layout/grid";
 
 // components
-@import "components/buttons",
-        "components/modal";
+@import "components/buttons";
+@import "components/modal";
 
 // pages
-@import "pages/front-page",
-        "pages/page";
+@import "pages/front-page";
+@import "pages/page";
