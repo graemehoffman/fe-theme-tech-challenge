@@ -48,7 +48,8 @@ const handleCloseOutside = (e) => {
 	if (!document.body.classList.contains('body--search-active')) {
 		return;
 	}
-	if (!closest(e.target, '.site-header__search') && !closest(e.target, '.site-header__search-trigger')) {
+	if (!closest(e.target, '.site-header__search')
+		&& !closest(e.target, '.site-header__search-trigger')) {
 		closeSearch();
 	}
 	// e.preventDefault();
@@ -75,7 +76,8 @@ const handleTabKey = (e) => {
 	if (e.which !== 9) {
 		return;
 	}
-	if (!closest(e.target, '.site-header__search') && document.body.classList.contains('body--search-active')) {
+	if (!closest(e.target, '.site-header__search')
+		&& document.body.classList.contains('body--search-active')) {
 		closeSearch();
 	}
 };
