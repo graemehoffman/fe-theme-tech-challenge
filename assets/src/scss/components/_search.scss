@@ -1,0 +1,30 @@
+
+.search__trigger {
+	position: relative;
+	right: calc(-1 * #{$spacer-mm});
+
+	.icon-search {
+		display: block;
+
+		.body--search-active & {
+			display: none;
+		}
+	}
+
+	.icon-close {
+		display: none;
+
+		.body--search-active & {
+			display: block;
+		}
+	}
+
+}
+
+.search {
+	display: none;
+	
+	.body--search-active & {
+		display: block;
+	}
+}

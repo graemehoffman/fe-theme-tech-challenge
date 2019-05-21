@@ -5,6 +5,8 @@
 
 // abstracts
 @import "utils/variables";
+@import "utils/mixins";
+@import "utils/helper-classes";
 
 // vendors overrides
 @import "vendors/normalize";
@@ -23,6 +25,10 @@
 // components
 @import "components/buttons";
 @import "components/modal";
+@import "components/header";
+@import "components/search";
+@import "components/menu";
+@import "components/branding";
 
 // pages
 @import "pages/front-page";

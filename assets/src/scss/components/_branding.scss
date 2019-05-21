@@ -1,0 +1,35 @@
+
+.site-branding {
+	display: flex;
+	align-items: center;
+}
+
+.site-branding__logo {
+
+}
+
+.site-branding__logo--default {
+	background-image: url('../svg/logo.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 36px;
+	width: 43px;
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+.site-branding__description {
+	display: none;
+	color: $color-white;
+	font-size: $font-size-navigation;
+	font-weight: $font-weight-bold;
+	margin-left: $spacer-sm;
+
+	@include from(3) {
+		display: block;
+	}
+}
+
+
+

@@ -1,5 +1,8 @@
 // import 'jquery';
 import GeneralScripts from './_generalScripts';
+import vendor from './vendor';
+
+vendor();
 
 const App = {
 
@@ -13,7 +16,6 @@ const App = {
 		}
 		initGeneralScripts();
 	}
-
 };
 
 document.addEventListener('DOMContentLoaded', () => {

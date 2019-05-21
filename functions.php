@@ -16,9 +16,9 @@
 
 	include( 'configure/shortcodes.php' );
 
-	// ACF
+	// Theme
 
-	include( 'configure/acf.php' );
+	include( 'configure/theme.php' );
 
 	// HOOKS ADMIN
 
