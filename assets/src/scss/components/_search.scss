@@ -1,5 +1,5 @@
 
-.search__trigger {
+.site-header__search-trigger {
 	position: relative;
 	right: calc(-1 * #{$spacer-mm});
 
@@ -24,7 +24,7 @@
 	}
 }
 
-.search {
+.site-header__search {
 	display: none;
 	position: relative;
 	z-index: 6;
@@ -41,7 +41,7 @@
 	}
 }
 
-.search__form-wrapper {
+.site-header__search-form-wrapper {
 	background-color: $color-blue;
 	padding: $spacer-m;
 

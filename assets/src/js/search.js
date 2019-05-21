@@ -6,8 +6,8 @@ import { on, triggerEvent } from './utils/events';
 
 const el = {
 	header: document.querySelectorAll('[data-js="header"]')[0],
-	searchTrigger: document.querySelectorAll('[data-js="search__trigger"]')[0],
-	search: document.querySelectorAll('[data-js="search"]')[0],
+	searchTrigger: document.querySelectorAll('[data-js="site-header__search-trigger"]')[0],
+	search: document.querySelectorAll('[data-js="site-header__search"]')[0],
 };
 
 const openSearch = () => {
@@ -48,10 +48,10 @@ const handleCloseOutside = (e) => {
 	if (!document.body.classList.contains('body--search-active')) {
 		return;
 	}
-	if (!closest(e.target, '.search') && !closest(e.target, '.search__trigger')) {
+	if (!closest(e.target, '.site-header__search') && !closest(e.target, '.site-header__search-trigger')) {
 		closeSearch();
 	}
-	e.preventDefault();
+	// e.preventDefault();
 };
 
 /**
@@ -75,7 +75,7 @@ const handleTabKey = (e) => {
 	if (e.which !== 9) {
 		return;
 	}
-	if (!closest(e.target, '.search') && document.body.classList.contains('body--search-active')) {
+	if (!closest(e.target, '.site-header__search') && document.body.classList.contains('body--search-active')) {
 		closeSearch();
 	}
 };
@@ -101,7 +101,7 @@ const bindEvents = () => {
 	on(document, 'keyup', handleTabKey);
 	on(document, '10upchallenge/open-nav', handleOpenNav);
 
-	delegate(el.header, '[data-js="search__trigger"]', 'click', onClickSearchTrigger);
+	delegate(el.header, '[data-js="site-header__search-trigger"]', 'click', onClickSearchTrigger);
 };
 
 const init = () => {

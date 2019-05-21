@@ -36,17 +36,17 @@
 				</div>
 
 				<button
-						class="search__trigger site-header__menu-trigger"
+						class="site-header__search-trigger site-header__menu-trigger"
 						aria-haspopup="true"
 						aria-expanded="false"
 						aria-controls="search"
-						data-js="search__trigger"
+						data-js="site-header__search-trigger"
 				>
 					<i class="icon icon-search"></i>
 					<i class="icon icon-close"></i>
 					<span class="menu-trigger__text a11y-visual-hide">
-					<?php _e( 'Toggle Search', '10upfechallenge' ); ?>
-				</span>
+						<?php _e( 'Toggle Search', '10upfechallenge' ); ?>
+					</span>
 				</button>
 
 			</div>
@@ -66,9 +66,9 @@
 
 		</div>
 
-		<div class="search" data-js="search" id="search" aria-hidden="true">
+		<div class="site-header__search" data-js="site-header__search" id="site-header__search" aria-hidden="true">
 			<h2 class="a11y-visual-hide"><?php _e( 'Search', '10upfechallenge' ); ?></h2>
-			<div class="search__form-wrapper">
+			<div class="site-header__search-form-wrapper">
 				<?php get_search_form(); ?>
 			</div>
 		</div>

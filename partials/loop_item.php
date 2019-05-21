@@ -36,7 +36,7 @@ if ($has_thumbnail) {
 		<header class="loop-item__header">
 
 			<div class="loop-item__header-meta">
-				<time class="loop-item__header-date">
+				<time datetime="<?php the_time( 'Y-m-d' ); ?>" class="loop-item__header-date">
 					<?php the_time( get_option( 'date_format' ) ); ?>
 				</time>
 				<div class="loop-item__header-categories">
@@ -61,9 +61,19 @@ if ($has_thumbnail) {
 
 		</div>
 
-		<a href="<?php the_permalink(); ?>" class="loop-item__read-more">
-			<?php _e('Read More', '10upfechallenge'); ?>
-			<span></span>
+		<a href="<?php the_permalink(); ?>" class="loop-item__read-more anchor--arrow">
+			<?php
+			printf(
+				wp_kses( __( 'Read more<span class="a11y-visual-hide"> about %s</span>', '10upfechallenge' ),
+					array(
+						'span' => array(
+							'class' => array()
+						)
+					)
+				),
+				get_the_title()
+			);
+			?>
 		</a>
 
 	</div>

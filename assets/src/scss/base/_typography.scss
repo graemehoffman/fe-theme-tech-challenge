@@ -77,10 +77,26 @@ a {
 }
 
 a.anchor--arrow {
+	position: relative;
+	padding-right: 15px;
+
 	&:after {
 		@include icon;
 
+		transition: $transition_all;
+		margin-left: $spacer-sm;
 		content: "\e900";
+		text-decoration: none;
+		font-style: 140%;
+		position: absolute;
+		right: 0;
+		top: 2px;
+	}
+
+	&:hover {
+		&:after {
+			right: -3px;
+		}
 	}
 }
 
