@@ -14,7 +14,10 @@ const openSearch = () => {
 	document.body.classList.add('body--search-active');
 	el.searchTrigger.setAttribute('aria-expanded', 'true');
 	el.search.setAttribute('aria-hidden', 'false');
-	el.search.querySelector('.search-form__field').focus();
+	const searchInput = el.search.querySelector('.search-form__field');
+	if (searchInput) {
+		searchInput.focus();
+	}
 	triggerEvent({
 		event: '10upchallenge/open-search'
 	});

@@ -1,4 +1,4 @@
-<form role="search" method="get" class="search-form" action="<?php esc_url( home_url( '/' ) ); ?>">
+<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<label class="search-form__label a11y-visual-hide" for="s">
 		<?php _x( 'Search for:', 'label' ); ?>
 	</label>

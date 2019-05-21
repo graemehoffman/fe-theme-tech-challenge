@@ -45,6 +45,8 @@ There is to build out here to make this more of a full function theme including
 
 First, clone this repository in your WordPress themes directory.
 
+If you have NVM run `nvm use` to align your node version.
+
 Then, run the following commands in the theme's directory :
 
 	npm install
@@ -56,7 +58,6 @@ Launch your watch for assets with :
 For production sites, create your build with :
 
 	npm run build
-
 
 
 
