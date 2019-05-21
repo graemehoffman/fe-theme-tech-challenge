@@ -2,27 +2,29 @@
 get_header();
 ?>
 
-    <div id="primary" class="content-area l-container">
-        <main id="main" class="site-main" role="main">
+	<div id="primary" class="content-area l-container">
 
-	        <?php
-	        while(have_posts()) : the_post();
-		        ?>
+		<main id="main" class="site-main" role="main">
 
-                <section>
-			        <?php the_title('<h1>', '</h1>'); ?>
+			<?php the_page_title(); ?>
 
-			        <?php
-			        the_content();
-			        ?>
-                </section>
+			<div class="loop">
 
-		        <?php
-	        endwhile; // End of the loop.
-	        ?>
+				<?php
+				while(have_posts()) : the_post();
+					?>
 
-        </main><!-- #main -->
-    </div><!-- #primary -->
+					<?php get_template_part( '/partials/loop_item', get_post_type() ); ?>
+
+				<?php
+				endwhile; // End of the loop.
+				?>
+
+			</div>
+
+		</main><!-- #main -->
+
+	</div><!-- #primary -->
 
 <?php
 get_footer();

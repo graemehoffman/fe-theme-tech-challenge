@@ -1,0 +1,43 @@
+
+.loop-item {
+
+}
+
+.loop-item__excerpt {
+
+}
+
+.loop-item__header-meta {
+	color: $color-gray;
+	margin-top: $spacer-m;
+
+	@include from(3) {
+		margin-top: 0;
+	}
+}
+
+.loop-item--has-thumbnail {
+
+	@include from(3) {
+		display: flex;
+		justify-content: stretch;
+
+		& > * {
+			&:nth-child(1) {
+				margin-right: $spacer-mm;
+				width: calc(66.66% - #{$spacer-mm});
+			}
+
+			&:nth-child(2) {
+				width: 33.33%;
+			}
+		}
+	}
+}
+
+.loop-item__image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+

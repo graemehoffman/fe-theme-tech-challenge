@@ -1,13 +1,20 @@
 
+/* -----------------------------------------------------------------------------
+ *
+ * Globals
+ *
+ * ----------------------------------------------------------------------------- */
+
+
 html {
-    -ms-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 }
 
 html, body {
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body,
@@ -16,19 +23,13 @@ button,
 input,
 select,
 textarea {
-    font: $font-weight-base 100%/$line-height-base $font-family-base;
-    color: $color-body-base;
+	font-weight: $font-weight-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	font-family: $font-family-base;
+	color: $color-body-base;
 }
 
-a,
-a:hover,
-a:focus,
-a:active {
-    color: inherit;
-    text-decoration: none;
+.site-main {
+	padding: $spacer-mm 0;
 }
-
-*, *:hover, *:focus {
-    outline:0 !important;
-}
-

@@ -8,15 +8,28 @@
 
 }
 
-.site-branding__logo--default {
-	background-image: url('../svg/logo.svg');
-	background-repeat: no-repeat;
-	background-size: contain;
-	height: 36px;
-	width: 43px;
+.site-branding__logo-img {
+	height: 40px;
+	width: auto;
 	display: block;
-	text-indent: -9999px;
-	overflow: hidden;
+}
+
+.site-branding__logo-link {
+
+	&:focus {
+		outline: 1px dotted $color-white !important;
+	}
+
+	.site-branding__logo--default & {
+		background-image: url('../svg/logo.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 36px;
+		width: 43px;
+		display: block;
+		text-indent: -9999px;
+		overflow: hidden;
+	}
 }
 
 .site-branding__description {

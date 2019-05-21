@@ -14,7 +14,7 @@
 
 // base
 @import "base/base";
-
+@import "base/typography";
 
 // layout
 @import "layout/header";
@@ -23,13 +23,12 @@
 @import "layout/grid";
 
 // components
-@import "components/buttons";
-@import "components/modal";
 @import "components/header";
 @import "components/search";
 @import "components/menu";
 @import "components/branding";
+@import "components/loop-item";
 
-// pages
-@import "pages/front-page";
-@import "pages/page";
+// pages (to add as necessary)
+// @import "pages/front-page";
+// @import "pages/page";

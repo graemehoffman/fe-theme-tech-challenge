@@ -83,8 +83,8 @@ gulp.task('default', gulp.parallel(
 	'sprite:watch',
 	'images:watch',
 	'scripts:watch',
-	'styles:watch'
-	//'browser:sync',
+	'styles:watch',
+	'browser:sync',
 	)
 );
 

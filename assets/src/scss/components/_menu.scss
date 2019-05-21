@@ -1,10 +1,22 @@
 
 
 .main-navigation {
+	max-width: $grid-max-width;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+
+	@include from(3) {
+		max-width: $grid-max-width;
+		margin: 0 auto;
+		padding: 0 $spacer-mm;
+		position: relative;
+	}
 
 	.menu {
 		margin: 0;
 		padding: 0;
+		width: 100%;
 
 		@include from(3) {
 			display: flex;
@@ -15,9 +27,18 @@
 		}
 	}
 
-	li {
+	.menu-item {
 		list-style: none;
 		font-size: $font-size-navigation;
+		border-bottom: 1px solid $color-light-blue;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+
+		@include from(3) {
+			border-bottom: none;
+		}
 	}
 
 	a {
@@ -28,9 +49,11 @@
 		text-decoration: underline;
 		transition: $transition_all;
 		padding: 0 $spacer-mm;
-		display: inline-block;
+		display: block;
+		width: 100%;
 
 		@include from(3) {
+			width: auto;
 			display: inline-block;
 		}
 
@@ -44,3 +67,10 @@
 	}
 }
 
+
+.nav__trigger {
+
+	.body--nav-active & {
+		background-color: $color-blue;
+	}
+}

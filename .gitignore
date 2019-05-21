@@ -16,6 +16,7 @@ assets/dist/
 bower_components/
 node_modules/
 
-_RESSOURCES/
-
 .DS_Store
+**/.DS_Store
+
+_RESSOURCES/

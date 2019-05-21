@@ -1,0 +1,100 @@
+
+/* -----------------------------------------------------------------------------
+ *
+ * Headers
+ *
+ * ----------------------------------------------------------------------------- */
+
+%headers {
+	font-family: $font-family-header;
+	font-weight: $font-weight-regular;
+	margin: 0.2em 0 0.3em;
+	line-height: 1.2;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	@extend %headers;
+}
+
+
+.h1 {
+	font-size: 44px;
+}
+
+.h2 {
+	font-size: 36px;
+}
+
+.h3 {
+	font-size: 28px;
+}
+
+.h4 {
+	font-size: 24px;
+}
+
+.h6 {
+	font-size: 20px;
+	font-weight: $font-weight-bold;
+	text-transform: uppercase;
+}
+
+
+/* -----------------------------------------------------------------------------
+ *
+ * Links
+ *
+ * ----------------------------------------------------------------------------- */
+
+a,
+a:hover,
+a:focus,
+a:active {
+	color: inherit;
+	text-decoration: none;
+}
+
+*, *:hover, *:focus {
+	outline:0 !important;
+}
+
+a {
+	color: $color-links;
+	text-decoration: underline;
+	transition: $transition_all;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $color-dark-blue;
+		text-decoration: underline;
+	}
+}
+
+a.anchor--arrow {
+	&:after {
+		@include icon;
+
+		content: "\e900";
+	}
+}
+
+.t-content {
+
+	p {
+		line-height: $line-height-lrg;
+		margin-bottom: $spacer-mm;
+
+		&:last-of-type {
+			margin-bottom: none;
+		}
+	}
+
+}
+
+

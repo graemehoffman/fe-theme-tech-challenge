@@ -19,12 +19,88 @@
 		}
 	}
 
+	.body--search-active & {
+		background-color: $color-blue;
+	}
 }
 
 .search {
 	display: none;
-	
+	position: relative;
+	z-index: 6;
+
 	.body--search-active & {
 		display: block;
 	}
+
+	@include from(3) {
+		max-width: $grid-max-width;
+		margin: 0 auto;
+		padding: 0 $spacer-mm;
+		position: relative;
+	}
 }
+
+.search__form-wrapper {
+	background-color: $color-blue;
+	padding: $spacer-m;
+
+	@include from(3) {
+		position: absolute;
+		right: 0;
+		display: inline-block;
+		margin-top: -53px;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color-black;
+	}
+}
+
+.search-form {
+	position: relative;
+}
+
+.search-form__field {
+	height: 34px;
+	display: block;
+	width: 100%;
+	border: 0;
+	outline: 0;
+	font-size: $font-size-form-base;
+
+	@include from(3) {
+		width: 320px;
+		line-height: 34px;
+		padding: 0 $spacer-xhg 0 $spacer-m;
+	}
+
+	@include placeholder {
+		color: $color-gray;
+	}
+}
+
+.search-form__submit {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 34px;
+	width: 40px;
+	text-align: center;
+	line-height: 34px;
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	font-size: 16px;
+	cursor: pointer;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color-black;
+	}
+
+}
+

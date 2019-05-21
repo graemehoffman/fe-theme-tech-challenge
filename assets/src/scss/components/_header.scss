@@ -38,6 +38,7 @@
 	&:hover,
 	&:active {
 		color: $color-nav-highlight;
+		background-color: $color-blue;
 	}
 }
 
@@ -55,7 +56,7 @@
 	background-color: $color-blue;
 	display: none;
 
-	.body--nav {
+	.body--nav-active & {
 		display: block;
 	}
 
